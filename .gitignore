@@ -1,0 +1,49 @@
+# ======================================
+# STM32 Brake Pressure Transducer Project (.ioc-based)
+# ======================================
+
+# Build output directories
+/Debug/
+/Release/
+/build/
+/out/
+
+# STM32CubeIDE metadata
+/.settings/
+/.metadata/
+*.launch
+*.log
+
+# Auto-generated temp or backup files
+*.db
+*.bak
+*.ioc-backup
+*.ioc-old
+*.tmp
+
+# Object and binary files
+*.o
+*.elf
+*.map
+*.lst
+*.bin
+*.hex
+*.d
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.user
+
+# ======================================
+# Keep these (important for project)
+# ======================================
+#!Core/
+#!Drivers/
+#!Startup/
+#!STM32_BrakeTrans.ioc
+#!STM32F446RETX_FLASH.ld
+#!STM32F446RETX_RAM.ld
+#!README.md
