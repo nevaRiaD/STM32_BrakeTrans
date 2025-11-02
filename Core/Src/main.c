@@ -63,6 +63,12 @@ __IO uint32_t         rx_f3_std = 0;   /* Contains the number of standard frames
 __IO uint32_t         rx_f3_ext = 0;   /* Contains the number of extended frames received from a STM32F3 MCU */
 __IO uint32_t         rx_f7_std = 0;   /* Contains the number of standard frames received from a STM32F7 MCU */
 __IO uint32_t         rx_f7_ext = 0;   /* Contains the number of extended frames received from a STM32F7 MCU */
+
+BrakeTransTypeDef BrakeTrans;
+/* @ Example code if there are two brakes
+ * BrakeTransTypeDef FrontBrake;
+ * BrakeTransTypeDef BackBrake;
+ */
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

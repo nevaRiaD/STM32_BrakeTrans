@@ -19,13 +19,15 @@
 
 // CAN Frame uses 8 bytes, but we will use float (4 bytes) for faster computation and less resources
 
-typedef struct BrakeTransducer
+typedef struct
 {
-	uint32_t adc_raw;
-	float psi_value;
-	uint32_t can_id;
-	uint8_t can_data[8]; // Up to 8 bytes for CAN data
-} BrakeTrans;
+    uint16_t adc_raw;      // last ADC reading (0-4095)
+    float    psi_value;    // calculated brake pressure [psi]
+    uint8_t  fault_flag;   // 0 = OK, 1 = sensor fault, etc.
+    uint32_t can_id;       // CAN arbitration ID
+    uint8_t  can_data[8];  // packed CAN payload for transmit
+} BrakeTransTypeDef;
+
 
 // ---- Hardware Constants ----
 #define BRAKE_TRANS_ADC_MAX     4095U
