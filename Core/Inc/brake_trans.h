@@ -19,13 +19,13 @@
 
 // CAN Frame uses 8 bytes, but we will use float (4 bytes) for faster computation and less resources
 
-typedef struct
+typedef struct BrakeTransducer
 {
 	uint32_t adc_raw;
 	float psi_value;
 	uint32_t can_id;
 	uint8_t can_data[8]; // Up to 8 bytes for CAN data
-}BrakeTrans;
+} BrakeTrans;
 
 // ---- Hardware Constants ----
 #define BRAKE_TRANS_ADC_MAX     4095U
